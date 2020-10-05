@@ -1,4 +1,4 @@
-package settings;
+package app.settings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,6 +48,18 @@ public final class TextConstants {
         data.put("OCTOBER", "Октябрь");
         data.put("NOVEMBER", "Ноябрь");
         data.put("DECEMBER", "Декабрь");
+
+
+        data.put("ERROR_TITLE_EMPTY", "Вы не ввели название!");
+        data.put("ERROR_EXISTS", "Такая запись уже существует!");
+        data.put("ERROR_DATE_FORMAT", "Некорректный формат даты!");
+        data.put("ERROR_CODE_EMPTY", "Вы не указали код!");
+        data.put("ERROR_CURRENCY_EMPTY", "Вы не выбрали валюту!");
+        data.put("ERROR_RECORD_EMPTY", "Вы не выбрали статью!");
+        data.put("ERROR_ACCOUNT_EMPTY", "Вы не выбрали счет!");
+        data.put("ERROR_RATE_INCORRECT", "Некорректное значение курса!");
+        data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
+        data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
 
         // IF ENGLISH
     }

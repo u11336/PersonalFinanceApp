@@ -1,6 +1,6 @@
-package finance;
+package app;
 
-import settings.TextConstants;
+import app.settings.TextConstants;
 
 import java.awt.*;
 import java.io.File;
