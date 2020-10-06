@@ -12,7 +12,7 @@ public class PersonalFinanceApp {
         System.out.println(TextConstants.getConstant("JANUARY"));
     }
 
-    public static void init(){
+    public static void init() {
         TextConstants.initData();
 
         //add font

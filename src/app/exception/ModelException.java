@@ -2,14 +2,14 @@ package app.exception;
 
 import app.settings.TextConstants;
 
-public class ModelException {
+public class ModelException extends Exception {
 
     public static final int TITLE_EMPTY = 1;
     public static final int EXISTS = 2;
     public static final int DATE_FORMAT = 3;
     public static final int CODE_EMPTY = 4;
     public static final int CURRENCY_EMPTY = 5;
-    public static final int ARTICLE_EMPTY = 6;
+    public static final int RECORD_EMPTY = 6;
     public static final int ACCOUNT_EMPTY = 7;
     public static final int RATE_INCORRECT = 8;
     public static final int AMOUNT_FORMAT = 9;
@@ -18,12 +18,12 @@ public class ModelException {
 
     public final int code;
 
-    public ModelException(int code){
+    public ModelException(int code) {
         this.code = code;
     }
 
-    public String getMessage(){
-        switch(code) {
+    public String getMessage() {
+        switch (code) {
             case TITLE_EMPTY:
                 return TextConstants.getConstant("ERROR_TITLE_EMPTY");
             case EXISTS:
@@ -34,7 +34,7 @@ public class ModelException {
                 return TextConstants.getConstant("ERROR_CODE_EMPTY");
             case CURRENCY_EMPTY:
                 return TextConstants.getConstant("ERROR_CURRENCY_EMPTY");
-            case ARTICLE_EMPTY:
+            case RECORD_EMPTY:
                 return TextConstants.getConstant("ERROR_RECORD_EMPTY");
             case ACCOUNT_EMPTY:
                 return TextConstants.getConstant("ERROR_ACCOUNT_EMPTY");
