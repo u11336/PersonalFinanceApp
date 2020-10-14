@@ -63,5 +63,4 @@ public class Settings {
     private static void setLocale() {
         Locale.setDefault(new Locale("ru"));
     }
-
 }
