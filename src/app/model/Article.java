@@ -4,13 +4,13 @@ import app.exception.ModelException;
 
 import java.util.Objects;
 
-public class Record extends Common {
+public class Article extends Common {
     private String title;
 
-    public Record() {
+    public Article() {
     }
 
-    public Record(String title) throws ModelException {
+    public Article(String title) throws ModelException {
         if (title.length() == 0) throw new ModelException(ModelException.TITLE_EMPTY);
         this.title = title;
     }
@@ -33,9 +33,9 @@ public class Record extends Common {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Record)) return false;
-        Record record = (Record) o;
-        return Objects.equals(title, record.title);
+        if (!(o instanceof Article)) return false;
+        Article article = (Article) o;
+        return Objects.equals(title, article.title);
     }
 
     @Override

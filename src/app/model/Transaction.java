@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Transaction extends Common {
     private Account account;
-    private Record record;
+    private Article article;
     private double amount;
     private String notice;
     private Date date;
@@ -14,26 +14,26 @@ public class Transaction extends Common {
     public Transaction() {
     }
 
-    public Transaction(Account account, Record record, double amount, String notice, Date date) throws ModelException {
+    public Transaction(Account account, Article article, double amount, String notice, Date date) throws ModelException {
         if (account == null) throw new ModelException(ModelException.ACCOUNT_EMPTY);
-        if (record == null) throw new ModelException(ModelException.RECORD_EMPTY);
+        if (article == null) throw new ModelException(ModelException.ARTICLE_EMPTY);
         this.account = account;
-        this.record = record;
+        this.article = article;
         this.amount = amount;
         this.notice = notice;
         this.date = date;
     }
 
-    public Transaction(Account account, Record record, double amount, String notice) throws ModelException {
-        this(account, record, amount, notice, new Date());
+    public Transaction(Account account, Article article, double amount, String notice) throws ModelException {
+        this(account, article, amount, notice, new Date());
     }
 
-    public Transaction(Account account, Record record, double amount, Date date) throws ModelException {
-        this(account, record, amount, "", date);
+    public Transaction(Account account, Article article, double amount, Date date) throws ModelException {
+        this(account, article, amount, "", date);
     }
 
-    public Transaction(Account account, Record record, double amount) throws ModelException {
-        this(account, record, amount, "", new Date());
+    public Transaction(Account account, Article article, double amount) throws ModelException {
+        this(account, article, amount, "", new Date());
     }
 
     public Account getAccount() {
@@ -44,12 +44,12 @@ public class Transaction extends Common {
         this.account = account;
     }
 
-    public Record getRecord() {
-        return record;
+    public Article getArticle() {
+        return article;
     }
 
-    public void setRecord(Record record) {
-        this.record = record;
+    public void setArticle(Article article) {
+        this.article = article;
     }
 
     public double getAmount() {
@@ -80,7 +80,7 @@ public class Transaction extends Common {
     public String toString() {
         return "Transaction{" +
                 "account=" + account +
-                ", record=" + record +
+                ", article=" + article +
                 ", amount=" + amount +
                 ", notice='" + notice + '\'' +
                 ", date=" + date +

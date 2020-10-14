@@ -9,7 +9,7 @@ public class ModelException extends Exception {
     public static final int DATE_FORMAT = 3;
     public static final int CODE_EMPTY = 4;
     public static final int CURRENCY_EMPTY = 5;
-    public static final int RECORD_EMPTY = 6;
+    public static final int ARTICLE_EMPTY = 6;
     public static final int ACCOUNT_EMPTY = 7;
     public static final int RATE_INCORRECT = 8;
     public static final int AMOUNT_FORMAT = 9;
@@ -34,8 +34,8 @@ public class ModelException extends Exception {
                 return TextConstants.getConstant("ERROR_CODE_EMPTY");
             case CURRENCY_EMPTY:
                 return TextConstants.getConstant("ERROR_CURRENCY_EMPTY");
-            case RECORD_EMPTY:
-                return TextConstants.getConstant("ERROR_RECORD_EMPTY");
+            case ARTICLE_EMPTY:
+                return TextConstants.getConstant("ERROR_ARTICLE_EMPTY");
             case ACCOUNT_EMPTY:
                 return TextConstants.getConstant("ERROR_ACCOUNT_EMPTY");
             case RATE_INCORRECT:

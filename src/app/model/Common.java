@@ -8,7 +8,7 @@ abstract public class Common {
     public String getValueForComboBox(){
         return null;
     }
-    public void recordAdd() {}
-    public void recordEdit() {}
-    public void recordRemove() {}
+    public void articleAdd() {}
+    public void articleEdit() {}
+    public void articleRemove() {}
 }
