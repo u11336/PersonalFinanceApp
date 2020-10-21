@@ -7,7 +7,9 @@ public final class TextConstants {
     private static final Map<String, String> data = new HashMap<>();
 
     public static String getConstant(String key) {
-        return data.get(key);
+        if(data.containsKey(key)) return data.get(key);
+        System.out.println("Такого ключа не существует"); // for refactoring
+        return "";
     }
 
     public static String[] getMonths() {
@@ -61,6 +63,8 @@ public final class TextConstants {
         data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
         data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
 
+        data.put("YES", "YES YES YES");
+        data.put("NO", "NO NO NO");
         // IF ENGLISH
     }
 }
