@@ -1,8 +1,7 @@
 package app.saveLoad;
 
-import java.
+import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElements(name = "data");
-
+@XmlRootElement(name = "data")
 public class Wrapper {
 }
