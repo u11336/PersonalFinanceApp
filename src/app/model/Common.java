@@ -1,5 +1,7 @@
 package app.model;
 
+import app.saveLoad.SaveData;
+
 abstract public class Common {
 
     public Common(){
@@ -8,7 +10,7 @@ abstract public class Common {
     public String getValueForComboBox(){
         return null;
     }
-    public void articleAdd() {}
-    public void articleEdit() {}
-    public void articleRemove() {}
+    public void postAdd(SaveData s) {}
+    public void postEdit(SaveData s) {}
+    public void postRemove(SaveData s) {}
 }

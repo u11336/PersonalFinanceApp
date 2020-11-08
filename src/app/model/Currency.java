@@ -1,6 +1,7 @@
 package app.model;
 
 import app.exception.ModelException;
+import app.saveLoad.SaveData;
 
 import java.util.Objects;
 
@@ -98,4 +99,29 @@ public class Currency extends Common {
     public double getRateByCurrency(Currency currency) {
         return rate / currency.rate;
     }
+
+    public void postAdd(SaveData s){
+        clearBase(s);
+    }
+
+    public void postEdit(SaveData s){
+        clearBase(s);
+        for(Account a : s.getAccounts()){
+            if(a.getCurrency().equals(s.getOldCommon())) a.setCurrency(this);
+        }
+    }
+
+    private void clearBase(SaveData s) {
+        if (isBase){
+            rate = 1;
+            Currency old = (Currency) s.getOldCommon();
+            for(Currency c : s.getCurrencies()){
+                if(!this.equals(c)) {
+                    c.setBase(false);
+                    if(old != null) c.setRate(c.rate / old.rate);
+                }
+            }
+        }
+    }
+
 }

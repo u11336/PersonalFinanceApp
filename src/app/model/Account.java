@@ -1,6 +1,7 @@
 package app.model;
 
 import app.exception.ModelException;
+import app.saveLoad.SaveData;
 
 import java.util.List;
 import java.util.Objects;
@@ -96,5 +97,22 @@ public class Account extends Common {
                 ", stertAmount=" + startAmount +
                 ", amount=" + amount +
                 '}';
+    }
+
+    @Override
+    public void postAdd(SaveData s){
+        setAmountFromTransactionsAndTransfers(s.getTransactions(), s.getTransfers());
+    }
+
+    @Override
+    public void postEdit(SaveData s) {
+        for(Transaction t : s.getTransactions()){
+            if(t.getAccount().equals(s.getOldCommon())) t.setAccount(this);
+        }
+        for(Transfer t : s.getTransfers()){
+            if(t.getFromAccount().equals(s.getOldCommon())) t.setFromAccount(this);
+            if(t.getToAccount().equals(s.getOldCommon())) t.setToAccount(this);
+        }
+        setAmountFromTransactionsAndTransfers(s.getTransactions(), s.getTransfers());
     }
 }
