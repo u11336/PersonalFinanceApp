@@ -8,15 +8,26 @@
             <rate>1.0</rate>
             <title>Ruble</title>
         </currency>
-        <startAmount>5000.0</startAmount>
-        <title>Wallet</title>
+        <startAmount>1420.0</startAmount>
+        <title>Deposit RUB</title>
     </accounts>
     <accounts>
         <currency>
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>1.5</rate>
+            <rate>77.0</rate>
+            <title>Dollar</title>
+        </currency>
+        <startAmount>2970.0</startAmount>
+        <title>Deposit USD</title>
+    </accounts>
+    <accounts>
+        <currency>
+            <base>false</base>
+            <code>USD</code>
+            <on>true</on>
+            <rate>77.0</rate>
             <title>Dollar</title>
         </currency>
         <startAmount>3500.0</startAmount>
@@ -30,31 +41,20 @@
             <rate>1.0</rate>
             <title>Ruble</title>
         </currency>
-        <startAmount>1420.0</startAmount>
-        <title>Deposit RUB</title>
-    </accounts>
-    <accounts>
-        <currency>
-            <base>false</base>
-            <code>USD</code>
-            <on>true</on>
-            <rate>1.5</rate>
-            <title>Dollar</title>
-        </currency>
-        <startAmount>2970.0</startAmount>
-        <title>Deposit USD</title>
+        <startAmount>5000.0</startAmount>
+        <title>Wallet</title>
     </accounts>
     <articles>
         <title>Grocery</title>
     </articles>
     <articles>
-        <title>Utilities</title>
+        <title>Interest rate</title>
     </articles>
     <articles>
         <title>Transport</title>
     </articles>
     <articles>
-        <title>Interest rate</title>
+        <title>Utilities</title>
     </articles>
     <currencies>
         <base>true</base>
@@ -67,23 +67,42 @@
         <base>false</base>
         <code>USD</code>
         <on>true</on>
-        <rate>1.5</rate>
+        <rate>77.0</rate>
         <title>Dollar</title>
     </currencies>
     <currencies>
         <base>false</base>
         <code>EUR</code>
         <on>true</on>
-        <rate>2.4</rate>
+        <rate>91.0</rate>
         <title>Euro</title>
     </currencies>
     <currencies>
         <base>false</base>
         <code>UAH</code>
         <on>true</on>
-        <rate>1.2</rate>
+        <rate>3.0</rate>
         <title>Hrivna</title>
     </currencies>
+    <transactions>
+        <account>
+            <currency>
+                <base>false</base>
+                <code>USD</code>
+                <on>true</on>
+                <rate>1.5</rate>
+                <title>Dollar</title>
+            </currency>
+            <startAmount>2970.0</startAmount>
+            <title>Deposit USD</title>
+        </account>
+        <amount>136.0</amount>
+        <article>
+            <title>Interest rate</title>
+        </article>
+        <date>2020-01-14T14:36:35.813Z</date>
+        <notice></notice>
+    </transactions>
     <transactions>
         <account>
             <currency>
@@ -140,25 +159,6 @@
         </article>
         <date>2020-11-09T14:36:35.813Z</date>
         <notice>Eggs</notice>
-    </transactions>
-    <transactions>
-        <account>
-            <currency>
-                <base>false</base>
-                <code>USD</code>
-                <on>true</on>
-                <rate>1.5</rate>
-                <title>Dollar</title>
-            </currency>
-            <startAmount>2970.0</startAmount>
-            <title>Deposit USD</title>
-        </account>
-        <amount>136.0</amount>
-        <article>
-            <title>Interest rate</title>
-        </article>
-        <date>2020-01-14T14:36:35.813Z</date>
-        <notice></notice>
     </transactions>
     <transfers>
         <date>2020-11-09T14:36:35.813Z</date>

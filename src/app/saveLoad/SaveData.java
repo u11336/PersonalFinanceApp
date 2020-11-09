@@ -7,6 +7,7 @@ import javax.jws.WebParam;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 
 public class SaveData {
@@ -165,6 +166,14 @@ public class SaveData {
         getRef(c).remove(c);
         c.postRemove(this);
         saved = false;
+    }
+
+    public void updateCurrencies() throws Exception {
+        HashMap<String, Double> rates = RateCurrency.getRates(getBaseCurrency());
+        for(Currency c : currencies)
+            c.setRate(rates.get(c.getCode()));
+        for (Account a : accounts)
+            a.getCurrency().setRate(rates.get(a.getCurrency().getCode()));
     }
 
     private List getRef(Common c) {

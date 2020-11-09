@@ -15,7 +15,13 @@ public class PersonalFinanceApp {
     public static void main(String[] args) throws ModelException {
         init();
         SaveData sd = SaveData.getInstance();
-        System.out.println(sd);
+//        try {
+//            sd.updateCurrencies();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        sd.save();
+        System.out.println(sd.getCurrencies());
 //        testModel();
     }
 
