@@ -1,6 +1,7 @@
 package app.gui;
 
 import app.gui.menu.MainMenu;
+import app.gui.toolbar.MainToolBar;
 import app.settings.Style;
 import app.settings.TextConstants;
 
@@ -11,6 +12,7 @@ public class MainFrame extends JFrame implements Refresh {
 
     private GridBagConstraints constraints;
     private final MainMenu mb;
+    private final MainToolBar tb;
 
     public MainFrame(){
         super(TextConstants.getConstant("PROGRAM_NAME"));
@@ -29,9 +31,9 @@ public class MainFrame extends JFrame implements Refresh {
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.gridwidth = 2; // ячека шириной в 2 столбца
-        // TODO: 11/11/20 add toolbar
 
-
+        tb = new MainToolBar();
+        add(tb, constraints);
 //        add(new MainButton(""));
 
 
