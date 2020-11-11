@@ -7,8 +7,7 @@ import app.settings.TextConstants;
 public final class MainToolBar extends AbstractToolBar {
 
     public MainToolBar(){
-        super();
-        setBorder(Style.BORDER_MAIN_TOOLBAR); //отступы для кнопок
+        super(Style.BORDER_MAIN_TOOLBAR);
         init();
     }
 

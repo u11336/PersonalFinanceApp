@@ -1,9 +1,8 @@
 package app.settings;
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.util.Comparator;
+
 public final class Style {
     public static final Color COLOR_BTN_BG_NORMAL = new Color(240,240,240);
     public static final Color COLOR_BTN_BG_HOVER = Color.YELLOW;
@@ -12,7 +11,8 @@ public final class Style {
     public static final Font FONT_BTN_MAIN = new Font("Roboto-Light", Font.BOLD, 14);
 
     public static final EmptyBorder BORDER_PANEL = new EmptyBorder(10,10,10,10);
-    public static final Border BORDER_MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
+    public static final EmptyBorder BORDER_MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
+    public static final EmptyBorder BORDER_FUNCTIONS_TOOLBAR = new EmptyBorder(5,5,5,5);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("images/main.png");
     public static final ImageIcon ICON_TOOLBAR_OVERVIEW = new ImageIcon("images/overview.png");
@@ -48,5 +48,11 @@ public final class Style {
 
     public static final ImageIcon ICON_MENU_HELP = new ImageIcon("images/menu_help.png");
     public static final ImageIcon ICON_MENU_HELP_ABOUT = new ImageIcon("images/menu_help_about.png");
+
+
+    public static final ImageIcon ICON_ADD = new ImageIcon("images/add.png");
+    public static final ImageIcon ICON_EDIT = new ImageIcon("images/edit.png");
+    public static final ImageIcon ICON_DELETE = new ImageIcon("images/delete.png");
+
 
 }

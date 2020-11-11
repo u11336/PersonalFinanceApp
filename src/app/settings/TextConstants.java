@@ -94,6 +94,10 @@ public final class TextConstants {
         data.put("TOOLBAR_STATISTICS", "Статистика");
 
 
+        data.put("ADD", "Добавить");
+        data.put("EDIT", "Изменить");
+        data.put("DELETE", "Удалить");
+
         // TODO: 11/11/20  add localization
     }
 }

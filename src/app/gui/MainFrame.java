@@ -1,6 +1,7 @@
 package app.gui;
 
 import app.gui.menu.MainMenu;
+import app.gui.toolbar.FunctionsToolBar;
 import app.gui.toolbar.MainToolBar;
 import app.settings.Style;
 import app.settings.TextConstants;
@@ -10,7 +11,7 @@ import java.awt.*;
 
 public class MainFrame extends JFrame implements Refresh {
 
-    private GridBagConstraints constraints;
+    private final GridBagConstraints constraints;
     private final MainMenu mb;
     private final MainToolBar tb;
 
@@ -34,7 +35,6 @@ public class MainFrame extends JFrame implements Refresh {
 
         tb = new MainToolBar();
         add(tb, constraints);
-//        add(new MainButton(""));
 
 
         //размечаем левую панель
