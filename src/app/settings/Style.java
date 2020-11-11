@@ -55,4 +55,5 @@ public final class Style {
     public static final ImageIcon ICON_DELETE = new ImageIcon("images/delete.png");
 
 
+    public static final Icon ICON_DATE = new ImageIcon("images/date.png");
 }

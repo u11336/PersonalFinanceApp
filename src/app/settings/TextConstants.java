@@ -98,6 +98,8 @@ public final class TextConstants {
         data.put("EDIT", "Изменить");
         data.put("DELETE", "Удалить");
 
+        data.put("TODAY", "Сегодня");
+
         // TODO: 11/11/20  add localization
     }
 }
