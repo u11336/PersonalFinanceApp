@@ -50,6 +50,8 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
         addMenuItem(edit, TextConstants.getConstant("MENU_EDIT_ADD"), Style.ICON_MENU_EDIT_ADD, HandlerCode.MENU_EDIT_ADD);
         menuEdit = addMenuItem(edit, TextConstants.getConstant("MENU_EDIT_EDIT"), Style.ICON_MENU_EDIT_EDIT, HandlerCode.MENU_EDIT_EDIT);
         menuDelete = addMenuItem(edit, TextConstants.getConstant("MENU_EDIT_DELETE"), Style.ICON_MENU_EDIT_DELETE, HandlerCode.MENU_EDIT_DELETE);
+        menuEdit.setEnabled(false);
+        menuDelete.setEnabled(false);
 
         addMenuItem(view, TextConstants.getConstant("MENU_VIEW_OVERVIEW"), Style.ICON_MENU_VIEW_OVERVIEW, HandlerCode.MENU_VIEW_OVERVIEW);
         addMenuItem(view, TextConstants.getConstant("MENU_VIEW_ACCOUNTS"), Style.ICON_MENU_VIEW_ACCOUNTS, HandlerCode.MENU_VIEW_ACCOUNTS);
@@ -81,11 +83,13 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
 
     @Override
     public void setEnableEditDelete(boolean enable) {
-
+        menuEdit.setEnabled(enable);
+        menuDelete.setEnabled(enable);
     }
 
     @Override
     public void refresh() {
-
+        removeAll();
+        init();
     }
 }
