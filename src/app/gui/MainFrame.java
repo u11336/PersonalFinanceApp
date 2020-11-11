@@ -31,6 +31,10 @@ public class MainFrame extends JFrame implements Refresh {
         constraints.gridwidth = 2; // ячека шириной в 2 столбца
         // TODO: 11/11/20 add toolbar
 
+
+//        add(new MainButton(""));
+
+
         //размечаем левую панель
         constraints.gridy = 1; // x не меняем так как нам нужен все тот же верхний ряд
         constraints.gridwidth = 1;
