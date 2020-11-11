@@ -13,7 +13,7 @@ public class MainFrame extends JFrame implements Refresh {
     private final MainMenu mb;
 
     public MainFrame(){
-        super(TextConstants.getConstant("PROGRAMM_NAME"));
+        super(TextConstants.getConstant("PROGRAM_NAME"));
         setResizable(false); // окно не изменяемое
         setIconImage(Style.ICON_MAIN.getImage());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // при закрытии окна завершается программа
