@@ -1,6 +1,7 @@
 package app;
 
 import app.exception.ModelException;
+import app.gui.MainFrame;
 import app.model.*;
 import app.saveLoad.SaveData;
 import app.settings.Settings;
@@ -15,13 +16,15 @@ public class PersonalFinanceApp {
     public static void main(String[] args) throws ModelException {
         init();
         SaveData sd = SaveData.getInstance();
+        MainFrame frame = new MainFrame();
+        frame.setVisible(true);
 //        try {
 //            sd.updateCurrencies();
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
 //        sd.save();
-        System.out.println(sd.getCurrencies());
+        System.out.println(sd);
 //        testModel();
     }
 
