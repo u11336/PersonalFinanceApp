@@ -2,7 +2,6 @@ package app.gui;
 
 import app.settings.Style;
 import app.settings.TextConstants;
-import org.jdatepicker.JDatePanel;
 import org.jdatepicker.impl.DateComponentFormatter;
 import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;

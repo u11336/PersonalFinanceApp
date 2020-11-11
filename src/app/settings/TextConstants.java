@@ -1,5 +1,6 @@
 package app.settings;
 
+import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -99,6 +100,25 @@ public final class TextConstants {
         data.put("DELETE", "Удалить");
 
         data.put("TODAY", "Сегодня");
+
+        data.put("FC_HOME", "Домашняя Директория");
+        data.put("FC_OPEN", "Открыть");
+        data.put("FC_SAVE", "Сохранить");
+        data.put("FC_CANCEL", "Отменить");
+        data.put("FC_LOOK", "Папка:");
+        data.put("FC_NAME_FILE", "Имя Файла:");
+        data.put("FC_TYPE_FILE", "Тип Файла:");
+        data.put("FC_UP", "Вверх");
+        data.put("FC_NEW_DIRECTORY", "Новая Папка");
+        data.put("FC_LIST", "Список");
+        data.put("FC_TABLE", "Таблица");
+        data.put("FC_NAME", "Имя");
+        data.put("FC_SIZE", "Размер");
+        data.put("FC_TYPE", "Тип");
+        data.put("FC_DATE", "Дата");
+        data.put("FC_ATTR", "Аттрибуты");
+        data.put("FC_ALL_FILTER", "Все Файлы");
+
 
         // TODO: 11/11/20  add localization
     }
