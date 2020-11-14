@@ -1,18 +1,26 @@
 package app.settings;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import java.applet.Applet;
 import java.awt.*;
 
 public final class Style {
+    public static final Dimension DIMENSION_DIALOG_TEXTFIELD_SIZE = new Dimension(200, 25);
+    public static final Dimension DIMENSION_DIALOG_PADDING_BUTTON = new Dimension(10, 0);
+    public static final int PADDING_DIALOG = 10;
+
     public static final Color COLOR_BTN_BG_NORMAL = new Color(240,240,240);
     public static final Color COLOR_BTN_BG_HOVER = Color.YELLOW;
 
     public static final Font FONT_BTN_TOOLBAR = new Font("Roboto-Light", Font.BOLD, 14);
     public static final Font FONT_BTN_MAIN = new Font("Roboto-Light", Font.BOLD, 14);
+    public static final Font FONT_DIALOG_LABEL = new Font("Roboto-Light", Font.BOLD, 12);
 
     public static final EmptyBorder BORDER_PANEL = new EmptyBorder(10,10,10,10);
     public static final EmptyBorder BORDER_MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
     public static final EmptyBorder BORDER_FUNCTIONS_TOOLBAR = new EmptyBorder(5,5,5,5);
+    public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10,10,10,10);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("images/main.png");
     public static final ImageIcon ICON_TOOLBAR_OVERVIEW = new ImageIcon("images/overview.png");
@@ -48,6 +56,7 @@ public final class Style {
 
     public static final ImageIcon ICON_MENU_HELP = new ImageIcon("images/menu_help.png");
     public static final ImageIcon ICON_MENU_HELP_ABOUT = new ImageIcon("images/menu_help_about.png");
+    public static final ImageIcon ICON_ABOUT = new ImageIcon("images/menu_help_about.png");
 
 
     public static final ImageIcon ICON_ADD = new ImageIcon("images/add.png");
@@ -55,5 +64,18 @@ public final class Style {
     public static final ImageIcon ICON_DELETE = new ImageIcon("images/delete.png");
 
 
-    public static final Icon ICON_DATE = new ImageIcon("images/date.png");
+    public static final ImageIcon ICON_DATE = new ImageIcon("images/date.png");
+    public static final ImageIcon ICON_OK = new ImageIcon("images/ok.png");
+    public static final ImageIcon ICON_CANCEL = new ImageIcon("images/cancel.png");
+
+    public static final ImageIcon ICON_TITLE = new ImageIcon("images/title.png");
+    public static final ImageIcon ICON_CURRENCY = new ImageIcon("images/currency.png");
+    public static final ImageIcon ICON_AMOUNT = new ImageIcon("images/amount.png");
+    public static final ImageIcon ICON_ACCOUNT = new ImageIcon("images/account.png");
+    public static final ImageIcon ICON_ARTICLE = new ImageIcon("images/article.png");
+    public static final ImageIcon ICON_NOTICE = new ImageIcon("images/notice.png");
+    public static final ImageIcon ICON_CODE = new ImageIcon("images/code.png");
+    public static final ImageIcon ICON_RATE = new ImageIcon("images/rate.png");
+    public static final ImageIcon ICON_ON = new ImageIcon("images/on.png");
+    public static final ImageIcon ICON_BASE = new ImageIcon("images/base.png");
 }

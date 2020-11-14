@@ -1,6 +1,7 @@
 package app.settings;
 
 import javax.swing.*;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -60,6 +61,7 @@ public final class TextConstants {
 
         data.put("YES", "Да");
         data.put("NO", "Нет");
+        data.put("ERROR", "Ошибка");
 
         data.put("MENU_FILE", "Файл");
         data.put("MENU_EDIT", "Правка");
@@ -98,8 +100,29 @@ public final class TextConstants {
         data.put("ADD", "Добавить");
         data.put("EDIT", "Изменить");
         data.put("DELETE", "Удалить");
+        data.put("CANCEL", "Отменить");
 
         data.put("TODAY", "Сегодня");
+
+
+        data.put("LABEL_TITLE", "Название:");
+        data.put("LABEL_CURRENCY", "Валюта:");
+        data.put("LABEL_START_AMOUNT", "Начальный баланс:");
+        data.put("LABEL_AMOUNT", "Сумма:");
+        data.put("LABEL_FROM_AMOUNT", "Снято:");
+        data.put("LABEL_TO_AMOUNT", "Зачислено:");
+        data.put("LABEL_ARTICLE", "Статья:");
+        data.put("LABEL_DATE", "Дата:");
+        data.put("LABEL_ACCOUNT", "Счет:");
+        data.put("LABEL_FROM_ACCOUNT", "Откуда:");
+        data.put("LABEL_TO_ACCOUNT", "Куда:");
+        data.put("LABEL_NOTICE", "Примечание:");
+        data.put("LABEL_CODE", "Код валюты:");
+        data.put("LABEL_BASE", "Базовая:");
+        data.put("LABEL_ON", "Включена:");
+        data.put("LABEL_RATE", "Курс:");
+
+
 
         data.put("FC_HOME", "Домашняя Директория");
         data.put("FC_OPEN", "Открыть");
@@ -119,6 +142,14 @@ public final class TextConstants {
         data.put("FC_ATTR", "Аттрибуты");
         data.put("FC_ALL_FILTER", "Все Файлы");
 
+        data.put("DIALOG_ABOUT_TITLE", "О программе");
+        data.put("ABOUT", "<body style='font-size:120%; text-align: center; width: 350px;'>" +
+                "<h1>Домашняя бухгалтерия</h1><p><img src='file:images/main.png'/></p>" +
+                "<p> ФЛЫВДФЛВДЛФЫВДФЛЫВОДЛФЫОВЛФЫОВ </p>" +
+                "<p>Copyright " + Calendar.getInstance().get(Calendar.YEAR) +" </p>" +
+                "<a href='https://github.com/validador'>github</a>" +
+                "<br><br><br><br><br>" +
+                "</body>");
 
         // TODO: 11/11/20  add localization
     }

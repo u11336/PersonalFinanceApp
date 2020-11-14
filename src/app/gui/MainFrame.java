@@ -1,7 +1,7 @@
 package app.gui;
 
+import app.gui.dialog.*;
 import app.gui.menu.MainMenu;
-import app.gui.toolbar.FunctionsToolBar;
 import app.gui.toolbar.MainToolBar;
 import app.settings.Style;
 import app.settings.TextConstants;
@@ -18,10 +18,13 @@ public class MainFrame extends JFrame implements Refresh {
     public MainFrame(){
         super(TextConstants.getConstant("PROGRAM_NAME"));
 
-        MainFileChooser fc = new MainFileChooser(this);
-        fc.save();
+//        new AccountAddEditDialog(this).showDialog();
+//        new ArticleAddEditDialog(this).showDialog();
+//        new CurrencyAddEditDialog(this).showDialog();
+//        new TransferAddEditDialog(this).showDialog();
+//        new TransactionAddEditDialog(this).showDialog();
 
-        setResizable(false); // окно не изменяемое
+        setResizable(false); // окно неизменяемое
         setIconImage(Style.ICON_MAIN.getImage());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // при закрытии окна завершается программа
 

@@ -11,6 +11,7 @@ import java.util.prefs.Preferences;
 
 public final class Settings {
 
+    // TODO: 11/12/20 change font
     public static final File FONT_AVENIR_LT55_ROMAN = new File("fonts/avenir_LT55_roman.ttf");
     public static final File SAVE_DIR = new File("saves/");
     public static final String SAVE_EXT = "sv";
