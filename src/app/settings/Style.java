@@ -13,6 +13,8 @@ public final class Style {
     public static final int PADDING_DIALOG = 10;
     public static final int PADDING_BALANCE = 3;
     public static final int PADDING_PANEL_BIG = 20;
+    public static final int PADDING_PANEL = 3;
+    public static final int PADDING_PANEL_EMPTY = 5;
 
     public static final Color COLOR_BTN_BG_NORMAL = new Color(240,240,240);
     public static final Color COLOR_BTN_BG_HOVER = Color.YELLOW;

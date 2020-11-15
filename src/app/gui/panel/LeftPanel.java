@@ -12,7 +12,7 @@ import javax.swing.*;
 import javax.xml.soap.Text;
 import java.awt.*;
 
-public class LeftPanel extends AbstractPanel {
+public final class LeftPanel extends AbstractPanel {
 
     public LeftPanel(MainFrame frame) {
         super(frame);
