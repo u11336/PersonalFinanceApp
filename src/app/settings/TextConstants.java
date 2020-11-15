@@ -152,6 +152,16 @@ public final class TextConstants {
                 "<br><br><br><br><br>" +
                 "</body>");
 
+
+        data.put("DATE", "Дата");
+        data.put("ACCOUNT", "Счет");
+        data.put("ARTICLE", "Статья");
+        data.put("AMOUNT", "Сумма");
+        data.put("NOTICE", "Примечание");
+
+        data.put("LAST_TRANSACTIONS", "Последние транзакции");
+
+
         // TODO: 11/11/20  add localization
     }
 }

@@ -21,6 +21,7 @@ public class TableHeaderIconRenderer extends DefaultTableCellRenderer {
         label.setFont(renderer.getFont());
         label.setForeground(renderer.getForeground());
         label.setBorder(((JComponent) renderer).getBorder());
+        label.setText("" + value);
         return label;
     }
 }

@@ -15,10 +15,10 @@ public abstract class TableData extends JTable implements Refresh {
     private final ImageIcon[] icons;
     private final String[] columns;
 
-    public TableData(MainTableModel tableModel, ImageIcon[] icons, String[] columns) {
+    public TableData(MainTableModel tableModel, String[] columns, ImageIcon[] icons) {
         super(tableModel);
-        this.icons = icons;
         this.columns = columns;
+        this.icons = icons;
 
         getTableHeader().setFont(Style.FONT_TABLE_HEADER);
         setFont(Style.FONT_TABLE);
@@ -43,8 +43,6 @@ public abstract class TableData extends JTable implements Refresh {
 //        for (int i = 0; i < columns.length; i++) {
 //            getColumn(TextConstants.getConstant(columns[i])).setHeaderRenderer(new TableHeaderIconRenderer(icons[i]));
 //        }
-        if(selectedRow != -1 && selectedRow < getRowCount())
-            setRowSelectionInterval(selectedRow, selectedRow);
-
+        if(selectedRow != -1 && selectedRow < getRowCount()) setRowSelectionInterval(selectedRow, selectedRow);
     }
 }

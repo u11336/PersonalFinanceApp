@@ -21,6 +21,8 @@ public final class Style {
     public static final Color COLOR_BTN_BG_NORMAL = new Color(240,240,240);
     public static final Color COLOR_BTN_BG_HOVER = Color.YELLOW;
     public static final Color COLOR_LEFT_PANEL_BALANCE = Color.WHITE;
+    public static final Color COLOR_EXP = new Color(200,0,0);
+    public static final Color COLOR_INC = new Color(0,100,0);
 
     public static final Font FONT_BTN_TOOLBAR = new Font("Roboto-Light", Font.BOLD, 14);
     public static final Font FONT_BTN_MAIN = new Font("Roboto-Light", Font.BOLD, 14);
@@ -92,4 +94,6 @@ public final class Style {
 
     public static final ImageIcon ICON_LEFT_PANEL_BALANCE_CURRENCIES = new ImageIcon("images/balance_currencies.png");
     public static final ImageIcon ICON_LEFT_PANEL_BALANCE = new ImageIcon("images/balance.png");
+    public static final ImageIcon ICON_PANEL_TRANSACTIONS =  new ImageIcon("images/transactions_panel.png");
+    public static final ImageIcon ICON_PANEL_OVERVIEW = new ImageIcon("images/overview_panel.png");
 }

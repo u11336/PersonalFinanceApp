@@ -3,6 +3,8 @@ package app.gui;
 import app.gui.dialog.*;
 import app.gui.menu.MainMenu;
 import app.gui.panel.LeftPanel;
+import app.gui.panel.OverviewPanel;
+import app.gui.panel.RightPanel;
 import app.gui.toolbar.MainToolBar;
 import app.settings.Style;
 import app.settings.TextConstants;
@@ -15,16 +17,11 @@ public class MainFrame extends JFrame implements Refresh {
     private final GridBagConstraints constraints;
     private final MainMenu mb;
     public final LeftPanel leftPanel;
+    public RightPanel rightPanel;
     private final MainToolBar tb;
 
     public MainFrame(){
         super(TextConstants.getConstant("PROGRAM_NAME"));
-
-//        new AccountAddEditDialog(this).showDialog();
-//        new ArticleAddEditDialog(this).showDialog();
-//        new CurrencyAddEditDialog(this).showDialog();
-//        new TransferAddEditDialog(this).showDialog();
-//        new TransactionAddEditDialog(this).showDialog();
 
         setResizable(false); // окно неизменяемое
         setIconImage(Style.ICON_MAIN.getImage());
@@ -45,16 +42,28 @@ public class MainFrame extends JFrame implements Refresh {
         tb = new MainToolBar();
         add(tb, constraints);
 
-
         //размечаем левую панель
         constraints.gridy = 1; // x не меняем так как нам нужен все тот же верхний ряд
         constraints.gridwidth = 1;
         constraints.anchor = GridBagConstraints.NORTH; // привязываем панельку к верху
+
         leftPanel = new LeftPanel(this);
         add(leftPanel, constraints);
 
+        setRightPanel(new OverviewPanel(this));
+
         pack();
         setLocationRelativeTo(null); // центруем окно
+    }
+
+    private void setRightPanel(RightPanel panel) {
+        if(rightPanel != null) remove(rightPanel);
+        constraints.gridy = 1;
+        constraints.gridx = 1;
+        rightPanel = panel;
+        panel.setBorder(Style.BORDER_PANEL);
+        add(rightPanel, constraints);
+        pack();
     }
 
     @Override // метод и сам интерфейс нужны для того чтобы производить обновление гуи при изменении данных
