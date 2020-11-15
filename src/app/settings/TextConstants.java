@@ -159,11 +159,17 @@ public final class TextConstants {
         data.put("ARTICLE", "Статья");
         data.put("AMOUNT", "Сумма");
         data.put("NOTICE", "Примечание");
+        data.put("FROM_AMOUNT", "Снято");
+        data.put("TO_AMOUNT", "Зачислено");
+        data.put("FROM_ACCOUNT", "Откуда");
+        data.put("TO_ACCOUNT", "Куда");
+
 
         data.put("LAST_TRANSACTIONS", "Последние транзакции");
         data.put("ACCOUNTS", "Счета");
         data.put("ARTICLES", "Статьи");
         data.put("TRANSACTIONS", "Транзакции");
+        data.put("TRANSFERS", "Переводы");
 
 
         // TODO: 11/11/20  add localization

@@ -6,11 +6,10 @@ import app.settings.Style;
 import app.settings.TextConstants;
 
 import javax.swing.*;
-import javax.xml.soap.Text;
 import java.awt.*;
 
 public class TransactionTableData extends TableData {
-    private static String[] columns = new String[]{"DATE", "ACCOUNT", "ARTICLE", "AMOUNT", "NOTICE"};
+    private static final String[] columns = new String[]{"DATE", "ACCOUNT", "ARTICLE", "AMOUNT", "NOTICE"};
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_DATE, Style.ICON_ACCOUNT, Style.ICON_ARTICLE, Style.ICON_AMOUNT, Style.ICON_NOTICE};
 
     public TransactionTableData(){
@@ -20,6 +19,12 @@ public class TransactionTableData extends TableData {
 
     public TransactionTableData(int count){
         super(new TransactionTableModel(columns, count), columns, icons);
+        init();
+    }
+
+    @Override
+    public void refresh(){
+        super.refresh();
         init();
     }
 

@@ -1,6 +1,5 @@
 package app.gui.table;
 
-import app.gui.table.model.AccountTableModel;
 import app.gui.table.model.ArticleTableModel;
 import app.settings.Style;
 
