@@ -3,8 +3,6 @@ package app.saveLoad;
 import app.exception.ModelException;
 import app.model.*;
 
-import javax.jws.WebParam;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -39,17 +37,14 @@ public class SaveData {
         this.accounts.sort((Account t1, Account t2) -> t1.getTitle().compareToIgnoreCase(t2.getTitle()));
         this.transactions.sort((Transaction t1, Transaction t2) -> (int) t1.getDate().compareTo(t2.getDate()));
         this.transfers.sort((Transfer t1, Transfer t2) -> (int) t1.getDate().compareTo(t2.getDate()));
-        this.currencies.sort(new Comparator<Currency>() {
-            @Override
-            public int compare(Currency currency, Currency t1) {
-                if(currency.isBase()) return -1;
-                if(t1.isBase()) return 1;
-                if(currency.isOn() ^ t1.isOn()){
-                    if(currency.isOn()) return 1;
-                    else return -1;
-                }
-                return currency.getTitle().compareToIgnoreCase(t1.getTitle());
+        this.currencies.sort((currency, t1) -> {
+            if(currency.isBase()) return -1;
+            if(t1.isBase()) return 1;
+            if(currency.isOn() ^ t1.isOn()){
+                if(currency.isOn()) return 1;
+                else return -1;
             }
+            return currency.getTitle().compareToIgnoreCase(t1.getTitle());
         });
     }
 
@@ -127,14 +122,14 @@ public class SaveData {
     public List<Transaction> getFilterTransaction(){
         ArrayList<Transaction> list = new ArrayList<>();
         for (Transaction t : transactions)
-            if(filter.chaeckDate(t.getDate())) list.add(t);
+            if(filter.checkDate(t.getDate())) list.add(t);
         return list;
     }
 
     public List<Transfer> getFilterTransfer(){
         ArrayList<Transfer> list = new ArrayList<>();
         for (Transfer t : transfers)
-            if(filter.chaeckDate(t.getDate())) list.add(t);
+            if(filter.checkDate(t.getDate())) list.add(t);
         return list;
     }
 

@@ -20,6 +20,7 @@ public class Filter {
 
     public Filter(int step) {
         this.step = step;
+        setFromTo(new GregorianCalendar());
     }
 
     public int getStep() {
@@ -54,7 +55,7 @@ public class Filter {
         setFromTo(new GregorianCalendar());
     }
 
-    public boolean chaeckDate(Date date) {
+    public boolean checkDate(Date date) {
         return (date.compareTo(from) > 0) && (date.compareTo(to) < 0);
     }
 
