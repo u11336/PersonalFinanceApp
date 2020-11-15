@@ -9,12 +9,14 @@ public final class Style {
     public static final Dimension DIMENSION_DIALOG_TEXTFIELD_SIZE = new Dimension(200, 25);
     public static final Dimension DIMENSION_DIALOG_PADDING_BUTTON = new Dimension(10, 0);
     public static final Dimension DIMENSION_PADDING_BALANCE = new Dimension(10, 0);
+    public static final Dimension DIMENSION_TABLE_SHOW_SIZE = new Dimension(850, 450);
 
     public static final int PADDING_DIALOG = 10;
     public static final int PADDING_BALANCE = 3;
     public static final int PADDING_PANEL_BIG = 20;
     public static final int PADDING_PANEL = 3;
     public static final int PADDING_PANEL_EMPTY = 5;
+    public static final int TABLE_ADD_ROW_HEIGHT = 18;
 
     public static final Color COLOR_BTN_BG_NORMAL = new Color(240,240,240);
     public static final Color COLOR_BTN_BG_HOVER = Color.YELLOW;
@@ -26,6 +28,8 @@ public final class Style {
     public static final Font FONT_LABEL_HEADER = new Font("Roboto-Light", Font.BOLD, 16);
     public static final Font FONT_LABEL_LEFT_PANEL_CURRENCY = new Font("Roboto-Light", Font.BOLD, 14);
     public static final Font FONT_LABEL_LEFT_PANEL_AMOUNT = new Font("Roboto-Light", Font.PLAIN, 14);
+    public static final Font FONT_TABLE_HEADER = new Font("Roboto-Light", Font.BOLD, 16);;
+    public static final Font FONT_TABLE = new Font("Roboto-Light", Font.PLAIN, 14);;
 
     public static final EmptyBorder BORDER_PANEL = new EmptyBorder(10,10,10,10);
     public static final EmptyBorder BORDER_LEFT_PANEL = new EmptyBorder(0,10,10,10);
@@ -41,8 +45,6 @@ public final class Style {
     public static final ImageIcon ICON_TOOLBAR_TRANSFERS = new ImageIcon("images/transfers.png");
     public static final ImageIcon ICON_TOOLBAR_CURRENCIES = new ImageIcon("images/currencies.png");
     public static final ImageIcon ICON_TOOLBAR_STATISTICS = new ImageIcon("images/statistics.png");
-
-
 
     public static final ImageIcon ICON_MENU_FILE = new ImageIcon("images/menu_file.png");
     public static final ImageIcon ICON_MENU_FILE_NEW = new ImageIcon("images/menu_file_new.png");
@@ -69,11 +71,9 @@ public final class Style {
     public static final ImageIcon ICON_MENU_HELP_ABOUT = new ImageIcon("images/menu_help_about.png");
     public static final ImageIcon ICON_ABOUT = new ImageIcon("images/menu_help_about.png");
 
-
     public static final ImageIcon ICON_ADD = new ImageIcon("images/add.png");
     public static final ImageIcon ICON_EDIT = new ImageIcon("images/edit.png");
     public static final ImageIcon ICON_DELETE = new ImageIcon("images/delete.png");
-
 
     public static final ImageIcon ICON_DATE = new ImageIcon("images/date.png");
     public static final ImageIcon ICON_OK = new ImageIcon("images/ok.png");
