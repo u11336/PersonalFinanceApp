@@ -8,16 +8,25 @@ import java.awt.*;
 public final class Style {
     public static final Dimension DIMENSION_DIALOG_TEXTFIELD_SIZE = new Dimension(200, 25);
     public static final Dimension DIMENSION_DIALOG_PADDING_BUTTON = new Dimension(10, 0);
+    public static final Dimension DIMENSION_PADDING_BALANCE = new Dimension(10, 0);
+
     public static final int PADDING_DIALOG = 10;
+    public static final int PADDING_BALANCE = 3;
+    public static final int PADDING_PANEL_BIG = 20;
 
     public static final Color COLOR_BTN_BG_NORMAL = new Color(240,240,240);
     public static final Color COLOR_BTN_BG_HOVER = Color.YELLOW;
+    public static final Color COLOR_LEFT_PANEL_BALANCE = Color.WHITE;
 
     public static final Font FONT_BTN_TOOLBAR = new Font("Roboto-Light", Font.BOLD, 14);
     public static final Font FONT_BTN_MAIN = new Font("Roboto-Light", Font.BOLD, 14);
     public static final Font FONT_DIALOG_LABEL = new Font("Roboto-Light", Font.BOLD, 12);
+    public static final Font FONT_LABEL_HEADER = new Font("Roboto-Light", Font.BOLD, 16);
+    public static final Font FONT_LABEL_LEFT_PANEL_CURRENCY = new Font("Roboto-Light", Font.BOLD, 14);
+    public static final Font FONT_LABEL_LEFT_PANEL_AMOUNT = new Font("Roboto-Light", Font.PLAIN, 14);
 
     public static final EmptyBorder BORDER_PANEL = new EmptyBorder(10,10,10,10);
+    public static final EmptyBorder BORDER_LEFT_PANEL = new EmptyBorder(0,10,10,10);
     public static final EmptyBorder BORDER_MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
     public static final EmptyBorder BORDER_FUNCTIONS_TOOLBAR = new EmptyBorder(5,5,5,5);
     public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10,10,10,10);
@@ -78,4 +87,7 @@ public final class Style {
     public static final ImageIcon ICON_RATE = new ImageIcon("images/rate.png");
     public static final ImageIcon ICON_ON = new ImageIcon("images/on.png");
     public static final ImageIcon ICON_BASE = new ImageIcon("images/base.png");
+
+    public static final ImageIcon ICON_LEFT_PANEL_BALANCE_CURRENCIES = new ImageIcon("images/balance_currencies.png");
+    public static final ImageIcon ICON_LEFT_PANEL_BALANCE = new ImageIcon("images/balance.png");
 }

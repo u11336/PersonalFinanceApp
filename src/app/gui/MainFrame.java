@@ -2,6 +2,7 @@ package app.gui;
 
 import app.gui.dialog.*;
 import app.gui.menu.MainMenu;
+import app.gui.panel.LeftPanel;
 import app.gui.toolbar.MainToolBar;
 import app.settings.Style;
 import app.settings.TextConstants;
@@ -13,6 +14,7 @@ public class MainFrame extends JFrame implements Refresh {
 
     private final GridBagConstraints constraints;
     private final MainMenu mb;
+    public final LeftPanel leftPanel;
     private final MainToolBar tb;
 
     public MainFrame(){
@@ -48,7 +50,8 @@ public class MainFrame extends JFrame implements Refresh {
         constraints.gridy = 1; // x не меняем так как нам нужен все тот же верхний ряд
         constraints.gridwidth = 1;
         constraints.anchor = GridBagConstraints.NORTH; // привязываем панельку к верху
-        // TODO: 11/11/20 add left panel
+        leftPanel = new LeftPanel(this);
+        add(leftPanel, constraints);
 
         pack();
         setLocationRelativeTo(null); // центруем окно

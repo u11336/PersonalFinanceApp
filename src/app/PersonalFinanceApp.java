@@ -15,17 +15,23 @@ import java.util.Date;
 public class PersonalFinanceApp {
     public static void main(String[] args) throws ModelException {
         init();
-        SaveData sd = SaveData.getInstance();
         MainFrame frame = new MainFrame();
         frame.setVisible(true);
-//        try {
+        SaveData sd = SaveData.getInstance();
 //            sd.updateCurrencies();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        sd.save();
         System.out.println(sd);
 //        testModel();
+    }
+
+    public static void init() {
+        try {
+            Settings.init();
+            TextConstants.initData();
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, Settings.FONT_AVENIR_LT55_ROMAN));
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void testModel() throws ModelException {
@@ -87,17 +93,5 @@ public class PersonalFinanceApp {
         sd.save();
 //        sd.load();
         System.out.println(sd);
-    }
-
-    public static void init() {
-        Settings.init();
-        TextConstants.initData();
-        //add font
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        try {
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, Settings.FONT_AVENIR_LT55_ROMAN));
-        } catch (FontFormatException | IOException e) {
-            e.printStackTrace();
-        }
     }
 }

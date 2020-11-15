@@ -122,7 +122,8 @@ public final class TextConstants {
         data.put("LABEL_ON", "Включена:");
         data.put("LABEL_RATE", "Курс:");
 
-
+        data.put("BALANCE_CURRENCIES", "Баланс по валютам");
+        data.put("BALANCE", "Итоговый баланс");
 
         data.put("FC_HOME", "Домашняя Директория");
         data.put("FC_OPEN", "Открыть");
