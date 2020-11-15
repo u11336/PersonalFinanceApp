@@ -162,6 +162,7 @@ public final class TextConstants {
 
         data.put("LAST_TRANSACTIONS", "Последние транзакции");
         data.put("ACCOUNTS", "Счета");
+        data.put("ARTICLES", "Статьи");
 
 
         // TODO: 11/11/20  add localization
