@@ -2,6 +2,7 @@ package app.gui;
 
 import app.gui.dialog.*;
 import app.gui.menu.MainMenu;
+import app.gui.panel.AccountPanel;
 import app.gui.panel.LeftPanel;
 import app.gui.panel.OverviewPanel;
 import app.gui.panel.RightPanel;
@@ -50,7 +51,8 @@ public class MainFrame extends JFrame implements Refresh {
         leftPanel = new LeftPanel(this);
         add(leftPanel, constraints);
 
-        setRightPanel(new OverviewPanel(this));
+        //default panel render
+        setRightPanel(new AccountPanel(this));
 
         pack();
         setLocationRelativeTo(null); // центруем окно

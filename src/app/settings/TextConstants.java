@@ -154,12 +154,14 @@ public final class TextConstants {
 
 
         data.put("DATE", "Дата");
+        data.put("TITLE", "Название");
         data.put("ACCOUNT", "Счет");
         data.put("ARTICLE", "Статья");
         data.put("AMOUNT", "Сумма");
         data.put("NOTICE", "Примечание");
 
         data.put("LAST_TRANSACTIONS", "Последние транзакции");
+        data.put("ACCOUNTS", "Счета");
 
 
         // TODO: 11/11/20  add localization

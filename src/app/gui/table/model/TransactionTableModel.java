@@ -4,10 +4,6 @@ import app.model.Transaction;
 import app.saveLoad.SaveData;
 import app.settings.Format;
 
-import java.text.Normalizer;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class TransactionTableModel extends MainTableModel {
 
     public static final int DATE = 0;
@@ -19,13 +15,11 @@ public class TransactionTableModel extends MainTableModel {
     private int count = -1;
 
     public TransactionTableModel(String[] columns){
-        super(SaveData.getInstance().getFilterTransaction());
-        this.columns = new ArrayList<>(Arrays.asList(columns));
+        super(SaveData.getInstance().getFilterTransaction(), columns);
     }
 
     public TransactionTableModel(String[] columns, int count){
-        super(SaveData.getInstance().getTransactionsOnCount(count));
-        this.columns = new ArrayList<>(Arrays.asList(columns));
+        super(SaveData.getInstance().getTransactionsOnCount(count), columns);
         this.count = count;
     }
 
