@@ -1,6 +1,7 @@
 package app.gui.table;
 
 import app.gui.Refresh;
+import app.gui.menu.TablePopupMenu;
 import app.gui.table.model.MainTableModel;
 import app.gui.table.renderer.MainTableCellRenderer;
 import app.gui.table.renderer.TableHeaderIconRenderer;
@@ -9,14 +10,17 @@ import app.settings.TextConstants;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
+import java.awt.*;
 
 public abstract class TableData extends JTable implements Refresh {
 
+    private final TablePopupMenu popupMenu;
     private final ImageIcon[] icons;
     private final String[] columns;
 
     public TableData(MainTableModel tableModel, String[] columns, ImageIcon[] icons) {
         super(tableModel);
+        this.popupMenu = new TablePopupMenu();
         this.columns = columns;
         this.icons = icons;
 
@@ -34,6 +38,21 @@ public abstract class TableData extends JTable implements Refresh {
 
         MainTableCellRenderer renderer = new MainTableCellRenderer();
         setDefaultRenderer(String.class, renderer);
+        setComponentPopupMenu(popupMenu);
+    }
+
+    @Override
+    public JPopupMenu getComponentPopupMenu(){
+        Point p = getMousePosition();
+        int row = rowAtPoint(p);
+        if(p != null && row != -1){
+            setRowSelectionInterval(row, row);
+            if(isRowSelected(rowAtPoint(p)))
+                return super.getComponentPopupMenu();
+            else
+                return null;
+        }
+        return super.getComponentPopupMenu();
     }
 
     @Override
