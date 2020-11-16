@@ -25,6 +25,7 @@ public class AboutDialog extends JDialog {
         pane.setOpaque(false);
 
         // делаем ссылку в описании кликабельной
+        // TODO: 11/16/20 link is not working 
         pane.addHyperlinkListener(hyperlinkEvent -> {
             if(HyperlinkEvent.EventType.ACTIVATED.equals(hyperlinkEvent.getEventType())){
                 try {

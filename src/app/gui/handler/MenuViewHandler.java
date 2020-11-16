@@ -22,7 +22,6 @@ public class MenuViewHandler extends Handler {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        FunctionsHandler handler = frame.getRightPanel().getTableData().getFunctionshandler();
         switch(actionEvent.getActionCommand()){
             case HandlerCode.MENU_VIEW_OVERVIEW:{
                 showOverviewPanel();
