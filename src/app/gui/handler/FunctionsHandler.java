@@ -37,7 +37,7 @@ public class FunctionsHandler extends Handler implements MouseListener, KeyListe
         super.actionPerformed(actionEvent);
     }
 
-    private void delete() {
+    public void delete() {
         Common c = getSelectedColumn();
         if (c != null) {
             int result = ConfirmDialog.show(frame, "CONFIRM_DELETE_TEXT", "CONFIRM_DELETE_TITLE");
@@ -47,11 +47,11 @@ public class FunctionsHandler extends Handler implements MouseListener, KeyListe
         }
     }
 
-    private void edit() {
+    public void edit() {
         showAddEditDialog(getSelectedColumn());
     }
 
-    private void add() {
+    public void add() {
         showAddEditDialog(null);
     }
 

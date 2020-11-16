@@ -19,9 +19,11 @@ public abstract class TableData extends JTable implements Refresh {
     private final TablePopupMenu popupMenu;
     private final ImageIcon[] icons;
     private final String[] columns;
+    private final FunctionsHandler handler;
 
     public TableData(MainTableModel tableModel, FunctionsHandler handler, String[] columns, ImageIcon[] icons) {
         super(tableModel);
+        this.handler = handler;
         this.popupMenu = new TablePopupMenu();
         this.columns = columns;
         this.icons = icons;
@@ -74,4 +76,8 @@ public abstract class TableData extends JTable implements Refresh {
     protected void init(){
 
     }
+
+    public FunctionsHandler getFunctionshandler() {
+        return handler;
+    };
 }
