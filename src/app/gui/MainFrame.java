@@ -1,7 +1,7 @@
 package app.gui;
 
-import app.gui.dialog.*;
 import app.gui.handler.MainToolBarHandler;
+import app.gui.handler.MainWindowHandler;
 import app.gui.menu.MainMenu;
 import app.gui.panel.*;
 import app.gui.toolbar.MainToolBar;
@@ -24,7 +24,7 @@ public class MainFrame extends JFrame implements Refresh {
 
         setResizable(false); // окно неизменяемое
         setIconImage(Style.ICON_MAIN.getImage());
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // при закрытии окна завершается программа
+        setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); // при закрытии окна завершается программа
 
         mb = new MainMenu(this);
         setJMenuBar(mb);
@@ -54,6 +54,8 @@ public class MainFrame extends JFrame implements Refresh {
 
         pack();
         setLocationRelativeTo(null); // центруем окно
+
+        addWindowListener(new MainWindowHandler());
     }
 
     public void setRightPanel(RightPanel panel) {
