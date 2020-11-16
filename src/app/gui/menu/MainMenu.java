@@ -6,6 +6,7 @@ import app.gui.Refresh;
 import app.gui.handler.Handler;
 import app.gui.handler.MenuEditHandler;
 import app.gui.handler.MenuFileHandler;
+import app.gui.handler.MenuViewHandler;
 import app.settings.HandlerCode;
 import app.settings.Style;
 import app.settings.TextConstants;
@@ -48,7 +49,7 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
 
         MenuFileHandler fileHandler = new MenuFileHandler(frame);
         MenuEditHandler editHandler = new MenuEditHandler(frame);
-        MenuFileHandler viewHandler = new MenuFileHandler(frame);
+        MenuViewHandler viewHandler = new MenuViewHandler(frame);
         MenuFileHandler helpHandler = new MenuFileHandler(frame);
 
         /////

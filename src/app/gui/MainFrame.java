@@ -49,13 +49,13 @@ public class MainFrame extends JFrame implements Refresh {
         add(leftPanel, constraints);
 
         //default panel render
-        setRightPanel(new TransferPanel(this));
+        setRightPanel(new OverviewPanel(this));
 
         pack();
         setLocationRelativeTo(null); // центруем окно
     }
 
-    private void setRightPanel(RightPanel panel) {
+    public void setRightPanel(RightPanel panel) {
         if(rightPanel != null) remove(rightPanel);
         constraints.gridy = 1;
         constraints.gridx = 1;
