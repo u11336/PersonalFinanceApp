@@ -42,7 +42,7 @@ public final class Chart {
             panel.setLayout(new GridBagLayout());
             JLabel label = new JLabel(TextConstants.getConstant("CHART_NO_DATA"));
             label.setFont(Style.FONT_LABEL_HEADER);
-            panel.add(label)
+            panel.add(label);
         }
         return panel;
     }

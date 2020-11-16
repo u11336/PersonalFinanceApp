@@ -24,7 +24,7 @@ public class Statistics {
         return amount;
     }
 
-    public static HashMap<String,Double> getDataForChartOnIncomeArticles(){
+    public static HashMap<String,Double> getDataForChartOnIncArticles(){
         return getDataForChartOnArticles(true);
     }
 

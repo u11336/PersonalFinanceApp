@@ -174,9 +174,12 @@ public final class TextConstants {
         data.put("TRANSACTIONS", "Транзакции");
         data.put("TRANSFERS", "Переводы");
         data.put("CURRENCIES", "Валюты");
+        data.put("STATISTICS", "Статистика");
 
 
         data.put("CHART_NO_DATA", "Нет данных за выбранный период");
+        data.put("CHART_INC", "Доходы по статьям");
+        data.put("CHART_EXP", "Расходы по статьям");
 
 
         // TODO: 11/11/20  add localization

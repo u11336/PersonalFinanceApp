@@ -38,6 +38,10 @@ public abstract class RightPanel extends AbstractPanel {
         this(frame, td, title, icon, new JPanel[]{});
     }
 
+    protected void setPanels(JPanel[] panels) {
+        this.panels = panels;
+    }
+
     @Override
     public void refresh() {
         super.refresh();
