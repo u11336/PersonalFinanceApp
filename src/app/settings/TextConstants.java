@@ -58,6 +58,7 @@ public final class TextConstants {
         data.put("ERROR_RATE_INCORRECT", "Некорректное значение курса!");
         data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
         data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
+        data.put("ERROR_UPDATE_CURRENCIES", "Не удалось обновить валюты!");
 
         data.put("YES", "Да");
         data.put("NO", "Нет");
@@ -180,6 +181,10 @@ public final class TextConstants {
         data.put("CHART_NO_DATA", "Нет данных за выбранный период");
         data.put("CHART_INC", "Доходы по статьям");
         data.put("CHART_EXP", "Расходы по статьям");
+
+
+        data.put("CONFIRM_EXIT_TEXT", "Вы действительно хотите выйти? Все несохраненные изменения будут утеряны.");
+        data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");
 
 
         // TODO: 11/11/20  add localization

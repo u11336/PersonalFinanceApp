@@ -32,6 +32,13 @@ public class SaveData {
             a.setAmountFromTransactionsAndTransfers(transactions, transfers);
     }
 
+    public void clear(){
+        articles.clear();
+        currencies.clear();
+        transfers.clear();
+        transactions.clear();
+    }
+
     private void sort() {
         this.articles.sort((Article t1, Article t2) -> t1.getTitle().compareToIgnoreCase(t2.getTitle()));
         this.accounts.sort((Account t1, Account t2) -> t1.getTitle().compareToIgnoreCase(t2.getTitle()));
@@ -67,23 +74,23 @@ public class SaveData {
     }
 
     public void setArticles(List<Article> articles) {
-        this.articles = articles;
+        if(articles != null) this.articles = articles;
     }
 
     public void setCurrencies(List<Currency> currencies) {
-        this.currencies = currencies;
+        if(currencies != null) this.currencies = currencies;
     }
 
     public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;
+        if(transactions != null) this.transactions = transactions;
     }
 
     public void setTransfers(List<Transfer> transfers) {
-        this.transfers = transfers;
+        if(transfers != null) this.transfers = transfers;
     }
 
     public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
+        if(accounts != null) this.accounts = accounts;
     }
 
     public List<Article> getArticles() {
@@ -171,6 +178,7 @@ public class SaveData {
             c.setRate(rates.get(c.getCode()));
         for (Account a : accounts)
             a.getCurrency().setRate(rates.get(a.getCurrency().getCode()));
+        saved = false;
     }
 
     private List getRef(Common c) {

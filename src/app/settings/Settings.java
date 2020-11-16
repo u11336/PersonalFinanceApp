@@ -42,7 +42,8 @@ public final class Settings {
     private static void save() {
         try {
             Wini ini = new Wini(FILE_SETTINGS);
-            ini.put("Settings", "FILE_SAVE", FILE_SAVE.getAbsolutePath().replace("\\", "\\\\"));
+            if(FILE_SAVE != null)
+                ini.put("Settings", "FILE_SAVE", FILE_SAVE.getAbsolutePath().replace("\\", "\\\\"));
             ini.store();
         } catch (IOException e) {
             e.printStackTrace();

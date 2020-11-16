@@ -16,7 +16,7 @@
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>77.0</rate>
+            <rate>7.0</rate>
             <title>Dollar</title>
         </currency>
         <startAmount>2970.0</startAmount>
@@ -27,7 +27,7 @@
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>77.0</rate>
+            <rate>7.0</rate>
             <title>Dollar</title>
         </currency>
         <startAmount>3500.0</startAmount>
