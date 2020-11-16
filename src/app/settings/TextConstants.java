@@ -168,13 +168,15 @@ public final class TextConstants {
         data.put("ON", "Включена");
         data.put("BASE", "Базовая");
 
-
         data.put("LAST_TRANSACTIONS", "Последние транзакции");
         data.put("ACCOUNTS", "Счета");
         data.put("ARTICLES", "Статьи");
         data.put("TRANSACTIONS", "Транзакции");
         data.put("TRANSFERS", "Переводы");
         data.put("CURRENCIES", "Валюты");
+
+
+        data.put("CHART_NO_DATA", "Нет данных за выбранный период");
 
 
         // TODO: 11/11/20  add localization
