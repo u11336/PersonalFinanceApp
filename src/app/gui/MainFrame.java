@@ -49,7 +49,7 @@ public class MainFrame extends JFrame implements Refresh {
         add(leftPanel, constraints);
 
         //default panel render
-        setRightPanel(new CurrencyPanel(this));
+        setRightPanel(new TransferPanel(this));
 
         pack();
         setLocationRelativeTo(null); // центруем окно

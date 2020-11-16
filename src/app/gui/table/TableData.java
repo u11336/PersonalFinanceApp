@@ -45,13 +45,7 @@ public abstract class TableData extends JTable implements Refresh {
     public JPopupMenu getComponentPopupMenu(){
         Point p = getMousePosition();
         int row = rowAtPoint(p);
-        if(p != null && row != -1){
-            setRowSelectionInterval(row, row);
-            if(isRowSelected(rowAtPoint(p)))
-                return super.getComponentPopupMenu();
-            else
-                return null;
-        }
+        if(p != null && row != -1) setRowSelectionInterval(row, row);
         return super.getComponentPopupMenu();
     }
 
