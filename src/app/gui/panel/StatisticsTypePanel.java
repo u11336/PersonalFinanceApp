@@ -2,6 +2,7 @@ package app.gui.panel;
 
 import app.gui.MainButton;
 import app.gui.MainFrame;
+import app.gui.handler.ChartHandler;
 import app.settings.HandlerCode;
 import app.settings.TextConstants;
 
@@ -17,7 +18,7 @@ public final class StatisticsTypePanel extends AbstractPanel{
 
     @Override
     protected void init() {
-        MainButton type = new MainButton(title, null, HandlerCode.TYPE);
+        MainButton type = new MainButton(title, new ChartHandler(frame), HandlerCode.TYPE);
         add(type);
     }
 }
