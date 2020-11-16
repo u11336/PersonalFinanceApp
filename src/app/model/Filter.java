@@ -82,13 +82,13 @@ public class Filter {
         calendar.setTime(from);
         switch (step) {
             case STEP_DAY:
-                calendar.add(Calendar.DAY_OF_MONTH, 1);
+                calendar.add(Calendar.DAY_OF_MONTH, i);
                 break;
             case STEP_MONTH:
-                calendar.add(Calendar.MONTH, 1);
+                calendar.add(Calendar.MONTH, i);
                 break;
             case STEP_YEAR:
-                calendar.add(Calendar.YEAR, 1);
+                calendar.add(Calendar.YEAR, i);
                 break;
         }
         setFromTo(calendar);
