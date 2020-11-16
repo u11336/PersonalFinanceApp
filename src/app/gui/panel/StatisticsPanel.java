@@ -18,6 +18,7 @@ public class StatisticsPanel extends RightPanel {
     public StatisticsPanel(MainFrame frame) {
         super(frame, null, "STATISTICS", Style.ICON_PANEL_STATISTICS, new JPanel[]{
                 new FilterPanel(frame),
+                new StatisticsTypePanel(frame, "CHART_INC"),
                 new Chart(Statistics.getDataForChartOnIncArticles(),
                         "CHART_INC",
                         SaveData.getInstance().getBaseCurrency().getCode()).getPanel()
@@ -41,7 +42,7 @@ public class StatisticsPanel extends RightPanel {
             title = "CHART_EXP";
             chart = new Chart(Statistics.getDataForChartOnExpArticles(), "CHART_EXP", SaveData.getInstance().getBaseCurrency().getCode());
         }
-        setPanels(new JPanel[]{ new FilterPanel(frame), chart.getPanel()});
+        setPanels(new JPanel[]{ new FilterPanel(frame), new StatisticsTypePanel(frame, title), chart.getPanel()});
         super.refresh();
     }
 
