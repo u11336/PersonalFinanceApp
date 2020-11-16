@@ -2,6 +2,7 @@ package app.gui.toolbar;
 
 import app.gui.EnableEditDelete;
 import app.gui.MainButton;
+import app.gui.handler.Handler;
 import app.settings.HandlerCode;
 import app.settings.Style;
 import app.settings.TextConstants;
@@ -11,8 +12,8 @@ public final class FunctionsToolBar extends AbstractToolBar implements EnableEdi
     private MainButton editBtn;
     private MainButton deleteBtn;
 
-    public FunctionsToolBar(){
-        super(Style.BORDER_FUNCTIONS_TOOLBAR);
+    public FunctionsToolBar(Handler handler){
+        super(Style.BORDER_FUNCTIONS_TOOLBAR, handler);
         init();
     }
 

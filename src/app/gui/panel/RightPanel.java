@@ -67,6 +67,10 @@ public abstract class RightPanel extends AbstractPanel {
         }
     }
 
+    public TableData getTableData(){
+        return td;
+    }
+
     @Override
     protected final void init() {
         enableEditDelete();

@@ -1,7 +1,7 @@
 package app.gui.table;
 
+import app.gui.handler.FunctionsHandler;
 import app.gui.table.model.CurrencyTableModel;
-import app.gui.table.model.TransactionTableModel;
 import app.gui.table.renderer.MainTableCellRenderer;
 import app.model.Currency;
 import app.settings.Style;
@@ -14,8 +14,8 @@ public class CurrencyTableData extends TableData {
     private static final String[] columns = new String[]{"TITLE", "CODE", "RATE", "ON", "BASE"};
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_TITLE, Style.ICON_CODE, Style.ICON_RATE, Style.ICON_ON, Style.ICON_BASE};
 
-    public CurrencyTableData(){
-        super(new CurrencyTableModel(columns), columns, icons);
+    public CurrencyTableData(FunctionsHandler handler){
+        super(new CurrencyTableModel(columns), handler, columns, icons);
         init();
     }
 
@@ -30,7 +30,7 @@ public class CurrencyTableData extends TableData {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
             Component renderer = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-            if (((Currency)((CurrencyTableModel)table.getModel()).getObjectByRow(row)).isOn())
+            if (((Currency)((CurrencyTableModel)table.getModel()).getCommonByRow(row)).isOn())
                 renderer.setForeground(Style.COLOR_ON);
             else
                 renderer.setForeground(Style.COLOR_OFF);

@@ -1,5 +1,6 @@
 package app.gui.table;
 
+import app.gui.handler.FunctionsHandler;
 import app.gui.table.model.TransferTableModel;
 import app.gui.table.renderer.MainTableCellRenderer;
 import app.settings.Style;
@@ -13,8 +14,8 @@ public class TransferTableData extends TableData {
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_DATE, Style.ICON_ACCOUNT, Style.ICON_ACCOUNT, Style.ICON_AMOUNT,
             Style.ICON_AMOUNT, Style.ICON_NOTICE};
 
-    public TransferTableData(){
-        super(new TransferTableModel(columns), columns, icons);
+    public TransferTableData(FunctionsHandler handler){
+        super(new TransferTableModel(columns), handler, columns, icons);
         init();
     }
 

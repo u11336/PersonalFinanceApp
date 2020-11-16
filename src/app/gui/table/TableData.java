@@ -1,6 +1,8 @@
 package app.gui.table;
 
 import app.gui.Refresh;
+import app.gui.handler.FunctionsHandler;
+import app.gui.handler.Handler;
 import app.gui.menu.TablePopupMenu;
 import app.gui.table.model.MainTableModel;
 import app.gui.table.renderer.MainTableCellRenderer;
@@ -18,7 +20,7 @@ public abstract class TableData extends JTable implements Refresh {
     private final ImageIcon[] icons;
     private final String[] columns;
 
-    public TableData(MainTableModel tableModel, String[] columns, ImageIcon[] icons) {
+    public TableData(MainTableModel tableModel, FunctionsHandler handler, String[] columns, ImageIcon[] icons) {
         super(tableModel);
         this.popupMenu = new TablePopupMenu();
         this.columns = columns;
@@ -31,6 +33,9 @@ public abstract class TableData extends JTable implements Refresh {
         setAutoCreateRowSorter(true);
         setPreferredScrollableViewportSize(Style.DIMENSION_TABLE_SHOW_SIZE);
         setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        addMouseListener(handler);
+        addKeyListener(handler);
 
         for (int i = 0; i < columns.length; i++) {
             getColumn(TextConstants.getConstant(columns[i])).setHeaderRenderer(new TableHeaderIconRenderer(icons[i]));
@@ -46,7 +51,8 @@ public abstract class TableData extends JTable implements Refresh {
         Point p = getMousePosition();
         if(p != null) {
             int row = rowAtPoint(p);
-            if (p != null && row != -1) setRowSelectionInterval(row, row);
+            if (isRowSelected(row)) setRowSelectionInterval(row, row);
+            else return null;
         }
         return super.getComponentPopupMenu();
     }
@@ -55,10 +61,13 @@ public abstract class TableData extends JTable implements Refresh {
     public void refresh() {
         int selectedRow = getSelectedRow();
         ((MainTableModel) getModel()).refresh();
-//        for (int i = 0; i < columns.length; i++) {
-//            getColumn(TextConstants.getConstant(columns[i])).setHeaderRenderer(new TableHeaderIconRenderer(icons[i]));
-//        }
-        if(selectedRow != -1 && selectedRow < getRowCount()) setRowSelectionInterval(selectedRow, selectedRow);
+        for (int i = 0; i < columns.length; i++) {
+            getColumn(TextConstants.getConstant(columns[i])).setHeaderRenderer(new TableHeaderIconRenderer(icons[i]));
+        }
+        if(selectedRow != -1 && selectedRow < getRowCount()){
+            setRowSelectionInterval(selectedRow, selectedRow);
+            requestFocus();
+        }
         init();
     }
 

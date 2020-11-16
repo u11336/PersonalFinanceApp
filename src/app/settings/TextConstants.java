@@ -185,6 +185,8 @@ public final class TextConstants {
 
         data.put("CONFIRM_EXIT_TEXT", "Вы действительно хотите выйти? Все несохраненные изменения будут утеряны.");
         data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");
+        data.put("CONFIRM_DELETE_TITLE", "Подтверждение удаления");
+        data.put("CONFIRM_DELETE_TEXT", "Вы уверены, что хотите удалить данную запись?");
 
 
         // TODO: 11/11/20  add localization

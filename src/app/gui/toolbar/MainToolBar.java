@@ -7,7 +7,7 @@ import app.settings.TextConstants;
 public final class MainToolBar extends AbstractToolBar {
 
     public MainToolBar(){
-        super(Style.BORDER_MAIN_TOOLBAR);
+        super(Style.BORDER_MAIN_TOOLBAR, null);
         init();
     }
 
