@@ -1,6 +1,7 @@
 package app.gui;
 
 import app.gui.dialog.*;
+import app.gui.handler.MainToolBarHandler;
 import app.gui.menu.MainMenu;
 import app.gui.panel.*;
 import app.gui.toolbar.MainToolBar;
@@ -37,7 +38,7 @@ public class MainFrame extends JFrame implements Refresh {
         constraints.gridy = 0;
         constraints.gridwidth = 2; // ячека шириной в 2 столбца
 
-        tb = new MainToolBar();
+        tb = new MainToolBar(new MainToolBarHandler(this));
         add(tb, constraints);
 
         //размечаем левую панель

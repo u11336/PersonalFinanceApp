@@ -1,13 +1,14 @@
 package app.gui.toolbar;
 
+import app.gui.handler.MainToolBarHandler;
 import app.settings.HandlerCode;
 import app.settings.Style;
 import app.settings.TextConstants;
 
 public final class MainToolBar extends AbstractToolBar {
 
-    public MainToolBar(){
-        super(Style.BORDER_MAIN_TOOLBAR, null);
+    public MainToolBar(MainToolBarHandler handler){
+        super(Style.BORDER_MAIN_TOOLBAR, handler);
         init();
     }
 
