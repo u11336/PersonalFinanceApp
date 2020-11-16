@@ -19,12 +19,7 @@ public class TransferTableData extends TableData {
     }
 
     @Override
-    public void refresh(){
-        super.refresh();
-        init();
-    }
-
-    private void init() {
+    protected final void init() {
         getColumn(TextConstants.getConstant("FROM_AMOUNT")).setCellRenderer(new TableCellAmountRenderer(Style.COLOR_EXP));
         getColumn(TextConstants.getConstant("TO_AMOUNT")).setCellRenderer(new TableCellAmountRenderer(Style.COLOR_INC));
     }

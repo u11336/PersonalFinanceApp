@@ -23,12 +23,7 @@ public class TransactionTableData extends TableData {
     }
 
     @Override
-    public void refresh(){
-        super.refresh();
-        init();
-    }
-
-    private void init() {
+    protected final void init() {
         getColumn(TextConstants.getConstant("AMOUNT")).setCellRenderer(new TableCellAmountRenderer());
     }
 

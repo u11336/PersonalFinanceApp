@@ -163,6 +163,10 @@ public final class TextConstants {
         data.put("TO_AMOUNT", "Зачислено");
         data.put("FROM_ACCOUNT", "Откуда");
         data.put("TO_ACCOUNT", "Куда");
+        data.put("CODE", "Код");
+        data.put("RATE", "Курс");
+        data.put("ON", "Включена");
+        data.put("BASE", "Базовая");
 
 
         data.put("LAST_TRANSACTIONS", "Последние транзакции");
@@ -170,6 +174,7 @@ public final class TextConstants {
         data.put("ARTICLES", "Статьи");
         data.put("TRANSACTIONS", "Транзакции");
         data.put("TRANSFERS", "Переводы");
+        data.put("CURRENCIES", "Валюты");
 
 
         // TODO: 11/11/20  add localization
