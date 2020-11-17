@@ -25,25 +25,25 @@ public class ModelException extends Exception {
     public String getMessage() {
         switch (code) {
             case TITLE_EMPTY:
-                return TextConstants.getConstant("ERROR_TITLE_EMPTY");
+                return "ERROR_TITLE_EMPTY";
             case EXISTS:
-                return TextConstants.getConstant("ERROR_EXISTS");
+                return "ERROR_EXISTS";
             case DATE_FORMAT:
-                return TextConstants.getConstant("ERROR_DATE_FORMAT");
+                return "ERROR_DATE_FORMAT";
             case CODE_EMPTY:
-                return TextConstants.getConstant("ERROR_CODE_EMPTY");
+                return "ERROR_CODE_EMPTY";
             case CURRENCY_EMPTY:
-                return TextConstants.getConstant("ERROR_CURRENCY_EMPTY");
+                return "ERROR_CURRENCY_EMPTY";
             case ARTICLE_EMPTY:
-                return TextConstants.getConstant("ERROR_ARTICLE_EMPTY");
+                return "ERROR_ARTICLE_EMPTY";
             case ACCOUNT_EMPTY:
-                return TextConstants.getConstant("ERROR_ACCOUNT_EMPTY");
+                return "ERROR_ACCOUNT_EMPTY";
             case RATE_INCORRECT:
-                return TextConstants.getConstant("ERROR_RATE_INCORRECT");
+                return "ERROR_RATE_INCORRECT";
             case AMOUNT_FORMAT:
-                return TextConstants.getConstant("ERROR_AMOUNT_FORMAT");
+                return "ERROR_AMOUNT_FORMAT";
             case NO_BASE_CURRENCY:
-                return TextConstants.getConstant("ERROR_NO_BASE_CURRENCY");
+                return "ERROR_NO_BASE_CURRENCY";
         }
         return "";
     }

@@ -26,7 +26,7 @@ public class ArticleAddEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected Common getCommonFromForm() throws ModelException {
+    public Common getCommonFromForm() throws ModelException {
         String title = ((JTextField) components.get("LABEL_TITLE")).getText();
         return new Article(title);
     }

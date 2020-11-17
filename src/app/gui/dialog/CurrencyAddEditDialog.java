@@ -45,7 +45,7 @@ public class CurrencyAddEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected Currency getCommonFromForm() throws ModelException {
+    public Currency getCommonFromForm() throws ModelException {
         try {
             String title = ((JTextField) components.get("LABEL_TITLE")).getText();
             String code = (String) ((JComboBox) components.get("LABEL_CODE")).getSelectedItem();

@@ -50,7 +50,7 @@ public class TransferAddEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected Common getCommonFromForm() throws ModelException {
+    public Common getCommonFromForm() throws ModelException {
         try {
             Account fAccount = (Account) ((CommonComboBox) components.get("LABEL_FROM_ACCOUNT")).getSelectedItem();
             Account tAccount = (Account) ((CommonComboBox) components.get("LABEL_TO_ACCOUNT")).getSelectedItem();
