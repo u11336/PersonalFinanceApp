@@ -3,6 +3,7 @@ package app.gui.dialog;
 import app.exception.ModelException;
 import app.gui.MainButton;
 import app.gui.MainFrame;
+import app.gui.handler.AddEditDialogHandler;
 import app.model.Common;
 import app.settings.HandlerCode;
 import app.settings.Style;
@@ -23,11 +24,13 @@ public abstract class AddEditDialog extends JDialog {
     protected LinkedHashMap<String, ImageIcon> icons = new LinkedHashMap<>();
     protected LinkedHashMap<String, Object> values = new LinkedHashMap<>();
     protected Common c;
+    private final MainFrame frame;
 
     public AddEditDialog(MainFrame frame){
         super(frame, TextConstants.getConstant("ADD"), true); // true означает что окно модальное
+        this.frame = frame;
+        addWindowListener(new AddEditDialogHandler(frame, this));
         setResizable(false);
-
     }
 
     public Common getCommon() {
@@ -72,9 +75,11 @@ public abstract class AddEditDialog extends JDialog {
             setTitle("EDIT");
             setIconImage(Style.ICON_EDIT.getImage());
         }
+
         getContentPane().removeAll();
         getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
         ((JPanel) getContentPane()).setBorder(Style.BORDER_DIALOG);
+
         for (Map.Entry<String, JComponent> entry : components.entrySet()) {
             String key = entry.getKey();
             JLabel label = new JLabel(TextConstants.getConstant(key));
@@ -90,19 +95,21 @@ public abstract class AddEditDialog extends JDialog {
                 if(values.containsKey(key)) ((JComboBox) component).setSelectedItem(values.get(key));
             else if(component instanceof JDatePickerImpl)
                 if(values.containsKey(key)) ((UtilDateModel)((JDatePickerImpl) component).getModel()).setValue((Date) values.get(key));
+            component.addKeyListener(new AddEditDialogHandler(frame, this));
             component.setAlignmentX(JComponent.LEFT_ALIGNMENT);
             add(label);
             add(Box.createVerticalStrut(Style.PADDING_DIALOG));
             add(component);
             add(Box.createVerticalStrut(Style.PADDING_DIALOG));
         }
-        MainButton ok = new MainButton(TextConstants.getConstant("ADD"), Style.ICON_OK, null, HandlerCode.ADD);
+        MainButton ok = new MainButton(TextConstants.getConstant("ADD"), Style.ICON_OK, new AddEditDialogHandler(frame, this), HandlerCode.ADD);
+
         if(!isAdd()){
             ok.setActionCommand(HandlerCode.EDIT);
             ok.setText(TextConstants.getConstant("EDIT"));
         }
 
-        MainButton cancel = new MainButton(TextConstants.getConstant("CANCEL"), Style.ICON_CANCEL, null, HandlerCode.CANCEL);
+        MainButton cancel = new MainButton(TextConstants.getConstant("CANCEL"), Style.ICON_CANCEL, new AddEditDialogHandler(frame, this), HandlerCode.CANCEL);
 
         JPanel panelButtons = new JPanel();
         panelButtons.setLayout(new BorderLayout());

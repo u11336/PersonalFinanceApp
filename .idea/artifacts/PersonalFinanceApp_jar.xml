@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PersonalFinanceApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PersonalFinanceApp_jar</output-path>
+    <root id="archive" name="PersonalFinanceApp.jar">
+      <element id="module-output" name="PersonalFinanceApp" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ini4j-0.5.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jdatepicker-1.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfreechart-1.0.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jcommon-1.0.23.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

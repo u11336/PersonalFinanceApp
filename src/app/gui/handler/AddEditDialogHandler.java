@@ -18,9 +18,21 @@ public class AddEditDialogHandler extends Handler implements KeyListener, Window
         this.dialog = dialog;
     }
 
+    private void addEdit(boolean add) {
+        try {
+            if(add) SaveData.getInstance().add(dialog.getCommonFromForm());
+            else SaveData.getInstance().edit(dialog.getCommon(), dialog.getCommonFromForm());
+            closeDialog();
+        } catch (ModelException e) {
+            ErrorDialog.show(frame, e.getMessage());
+        }
+    }
+
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-
+        if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER) {
+            addEdit(dialog.isAdd());
+        }
     }
 
     @Override
@@ -30,22 +42,18 @@ public class AddEditDialogHandler extends Handler implements KeyListener, Window
     
     @Override
     public void actionPerformed(ActionEvent actionEvent){
-        try {
-            switch (actionEvent.getActionCommand()){
-                case HandlerCode.ADD:
-                    SaveData.getInstance().add(dialog.getCommonFromForm());
-                    break;
-                case HandlerCode.EDIT:
-                    SaveData.getInstance().edit(dialog.getCommon(), dialog.getCommonFromForm());
-                    break;
-                case HandlerCode.CANCEL:
-                    closeDialog();
-                    break;
-            }
-            super.actionPerformed(actionEvent);
-        } catch (ModelException e) {
-            ErrorDialog.show(frame, e.getMessage());
+        switch (actionEvent.getActionCommand()){
+            case HandlerCode.ADD:
+                addEdit(true);
+                break;
+            case HandlerCode.EDIT:
+                addEdit(false);
+                break;
+            case HandlerCode.CANCEL:
+                closeDialog();
+                break;
         }
+        super.actionPerformed(actionEvent);
     }
 
     private void closeDialog() {
